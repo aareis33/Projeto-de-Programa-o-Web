@@ -1,0 +1,79 @@
+{
+  "info": {
+    "name": "Turmas API - Coleção",
+    "_postman_id": "927a467f-bac3-4e9f-9089-48a55941b997",
+    "description": "Endpoints para testes locais da API de Turmas (Spring Boot).",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Criar turma (POST /turmas)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"nome\": \"ADS 1\",\n  \"periodo\": \"Noite\",\n  \"curso\": \"ADS\"\n}"
+        },
+        "url": {
+          "raw": "http://localhost:8080/turmas",
+          "protocol": "http",
+          "host": [
+            "localhost"
+          ],
+          "port": "8080",
+          "path": [
+            "turmas"
+          ]
+        }
+      }
+    },
+    {
+      "name": "Buscar por ID (GET /turmas/1)",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/turmas/1"
+      }
+    },
+    {
+      "name": "Listar todas (GET /turmas)",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/turmas"
+      }
+    },
+    {
+      "name": "Buscar por nome (GET /turmas/nome/ADS%201)",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/turmas/nome/ADS%201"
+      }
+    },
+    {
+      "name": "Buscar por período (GET /turmas/periodo/Noite)",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/turmas/periodo/Noite"
+      }
+    },
+    {
+      "name": "Buscar por curso (GET /turmas/curso/ADS)",
+      "request": {
+        "method": "GET",
+        "url": "http://localhost:8080/turmas/curso/ADS"
+      }
+    },
+    {
+      "name": "Deletar por ID (DELETE /turmas/1)",
+      "request": {
+        "method": "DELETE",
+        "url": "http://localhost:8080/turmas/1"
+      }
+    }
+  ]
+}
